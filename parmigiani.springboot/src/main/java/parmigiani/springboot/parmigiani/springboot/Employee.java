@@ -1,14 +1,13 @@
 package parmigiani.springboot.parmigiani.springboot;
 
 import lombok.Data;
+import org.springframework.hateoas.ResourceSupport;
 
 @Data
-public class Employee {
+public class Employee extends ResourceSupport {
     private String firstName;
     private String lastName;
     private Integer age;
-
-    private Employee employee;
 
     public Employee(){};
 
