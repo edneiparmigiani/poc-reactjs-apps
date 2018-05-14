@@ -9,8 +9,5 @@
         <module name="parmigiani.springboot" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="parmigiani.springboot" target="1.6" />
-    </bytecodeTargetLevel>
   </component>
 </project>
