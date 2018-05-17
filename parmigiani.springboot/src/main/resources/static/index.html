@@ -56,7 +56,7 @@
         loadEmployeesFromServer: function () {
             var self = this;
             $.ajax({
-                url: "http://localhost:8080/employee",
+                url: "https://stormy-island-71717.herokuapp.com/employee",
             }).then(function(data) {
                 self.setState({employees: data});
             });
