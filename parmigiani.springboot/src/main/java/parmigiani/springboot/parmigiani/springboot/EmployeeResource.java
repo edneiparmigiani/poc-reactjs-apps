@@ -23,7 +23,7 @@ public class EmployeeResource {
     @RequestMapping(value = "/employee/{id}", method = RequestMethod.GET)
     public ResponseEntity<Employee> get(@PathVariable("id") long id) {
         Employee e1 = new Employee(1l, "Ednei José", "Parmigiani Júnior", 30);
-        e1.add(linkTo(methodOn(EmployeeResource.class).get(1)).withSelfRel());
+        e1.add(linkTo(methodOn(EmployeeResource.class).get(1l)).withSelfRel());
 
         return new ResponseEntity<Employee>((e1), HttpStatus.OK);
     }
