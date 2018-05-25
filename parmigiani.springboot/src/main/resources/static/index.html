@@ -17,7 +17,7 @@
 
     var Employee = React.createClass({
         render: function () {
-            console.log('render-Employee')
+            //console.log('render-Employee')
             return (
                 <tr>
                     <td>{this.props.employee.firstName}</td>
@@ -35,11 +35,11 @@
 
     var EmployeeTable = React.createClass({
         render: function () {
-            console.log('render-EmployeeTable')
+            //console.log('render-EmployeeTable')
             var rows = [];
             this.props.employees.forEach(function (employee) {
                 rows.push(<Employee key={employee.code} employee={employee}/>);
-                console.log(employee)
+                //console.log(employee)
             });
 
             return (
@@ -60,7 +60,7 @@
 
     var App = React.createClass({
         loadEmployeesFromServer: function () {
-            console.log('loadEmployeesFromServer')
+            //console.log('loadEmployeesFromServer')
             var self = this;
             $.ajax({
                 url: "/employee",
@@ -70,17 +70,17 @@
         },
 
         getInitialState: function () {
-            console.log('getInitialState')
+            //console.log('getInitialState')
             return {employees: []};
         },
 
         componentDidMount: function () {
-            console.log('componentDidMount')
+            //console.log('componentDidMount')
             this.loadEmployeesFromServer();
         },
 
         render() {
-            console.log('render')
+            //console.log('render')
             return (<EmployeeTable employees={this.state.employees}/>);
         }
     });
